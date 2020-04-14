@@ -1,0 +1,37 @@
+<nav>
+    <div class="nav-wrapper blue lighten-1">
+        <span data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></span>
+        <a href="#" class="brand-logo">StoryBook</a>
+        {{#if user}}
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href=""><i class="fas fa-user-tie"></i></a></li>
+        </ul>
+        {{else}}
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><i class="fas fa-sign-in-alt"></i></li>
+        </ul>
+        {{/if}}
+    </div>
+</nav>
+
+<ul id="slide-out" class="sidenav">
+    {{#if user}}
+    <li>
+        <div class="flex">
+            <img class="responsive-img circle user-icon"
+                src="https://lh3.googleusercontent.com/a-/AOh14GjIF2xbqv-8BFGIwMdf-r9XDAOlRmWbbIJeTv_g">
+            <span class="user-name">Abhishek muge</span>
+        </div>
+    </li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="/stories"><i class="fas fa-book"></i> Public Stories</a></li>
+    <li><a href="/stories/my"><i class="fas fa-book"></i> My Stories</a></li>
+    <li><a href="/dashboard"><i class="fas fa-columns"></i> Dashboard</a></li>
+    <li><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    {{else}}
+    <li><a href=""><i class="fas fa-book"></i> Public Stories</a></li>
+    <li><a href="/auth/google"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+    {{/if}}
+</ul>

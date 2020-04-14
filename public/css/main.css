@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Source+Code+Pro&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+.fa-bars, .fa-user-tie, .fa-sign-in-alt{
+    margin: 0 20px;
+}
+.main_content{
+    max-height: auto;
+    
+}
+.wallpaper{
+    width: 550px;
+    height: 550px;
+}
+
+.welcome_text h1{
+    margin: 9rem 0 5rem 7rem;
+    font-family: 'Arvo', serif;
+    position: relative;
+    color: #2a7e9c;
+}
+
+.welcome_text h1:after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    bottom: -6px; 
+    margin: 0 auto;
+      left: 0;
+    right: 10;
+      width: 20%;
+      background: #0099cc;
+      border-radius: 100px;
+}
+ 
+
+.page_des,.link{
+    margin: 3rem 0 1rem 7rem;
+}
+.page_des h5{
+    line-height: 40px;
+    color: linear-gradient(to right, rgb(131, 96, 195), rgb(46, 191, 145));
+}
+.img_section{
+    margin-top: 6rem;
+}
+.user-icon{
+    width: 50px;
+    height: 50px;
+    margin: 20px 20px 0 20px;
+}
+.user-name{
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+.flex{
+    display: flex;
+}
