@@ -1,5 +1,5 @@
-module.exports ={
-    mongoURI : 'mongodb+srv://admin:admin1234@cluster0-hofau.mongodb.net/test?retryWrites=true&w=majority',
-    googleClientID : '698072335243-sgt3571pc155vseqmr1os0bclje4a5ou.apps.googleusercontent.com',
-    googleClientSecret : 'RbJvC65tv5_wFsiB3DlQf_yL'
-}
+if(process.env.NODE_ENV === 'production'){
+    module.exports = require('./keys_prod');
+  } else {
+    module.exports = require('./keys_dev');
+  }
