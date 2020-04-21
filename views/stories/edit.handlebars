@@ -1,0 +1,51 @@
+<div class="container">
+
+    <h1>What Your story</h1>
+
+    <div class="row">
+        <form action="/stories/{{story.id}}?_method=PUT" method="POST" class="col s12">
+            <input type="hidden" name="_method" value="PUT">
+            <div class="row">
+                <div class="input-field">
+                    <input type="text" name="title" id="title" value="{{story.title}}">
+                    <label for="title">Title</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                   <select name="status" id="status">
+                       {{#select story.status}}
+                       <option value="Private">Private</option>
+                       <option value="public">Public</option>
+                       <option value="unpublished">Unpublished</option>
+                       {{/select}}
+                   </select>
+                    <label for="status">Status</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" name="allowcomment" {{#if story.allowComments}} checked="checked" {{/if}} />
+                        <span>Allow Comment</span>
+                    </label>
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                   <h5>Tell us storie</h5>
+                   <textarea name="body" id="body">
+                       {{story.body}}
+                   </textarea>
+                </div>
+            </div>
+
+            <input type="submit" value="save" class="btn btn-large red lighten-2">
+
+
+        </form>
+    </div>
+</div>  
